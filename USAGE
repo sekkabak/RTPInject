@@ -1,0 +1,24 @@
+The following are directions for use of RTPInject:
+
+1) First, launch RTPInject by performing the following command as root:
+bash# python rtpinject.py
+
+2) When RTPInject loads it will show three fields in the main screen, the "Source" field, the 
+"Destination" field, and the "Voice Codec" field. The Source field will be autopopulated as 
+RTPInject sniffs RTP streams on the wire. When a new IP address appears in the Source field, 
+the user can click on it and the Destination and Voice Codec fields will then be autopopulated 
+with the destination host of the stream and the voice codec in use in the stream. 
+
+3) Ths user now pushes the button with the folder icon which allows the user to navigate the 
+filesystem and select an appropriate file. RTPInject is able to perform automatic transcoding
+from a variety of audio formats, depending on the gstreamer plugins installed, to the PCM-U, PCM-A, 
+or GSM formats suitable for injection. If the communication occurs using one of the less common 
+codecs, the user is still able to inject audio, however they will have to pre-create a file in the
+appropriate format. Now that the user knows the voice codec in use, they can create the file they 
+wish to inject with an audio tool such as Sound Recorder for Windows or Sox for Linux. These tools 
+provide the means to transcode audio to most of the often used RTP codecs such as PCMA, PCMU, and 
+GSM. Once this file is created using one of these tools, the user pushes the button with the folder 
+icon which allows the user to navigate the file system and select the appropriate sound file.
+
+4) With the RTP stream and audio file selected, the users pushes the Inject button. This will 
+inject the selected sound file to the destination host in the RTP stream. 

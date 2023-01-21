@@ -1,0 +1,39 @@
+RTPInject requires the following packages:
+	- Python 2.4 or higher (usually pre-installed)
+	- GTK 2.8 or higher (usually pre-installed)
+	- PyGTK 2.8 or higher (usually pre-installed)
+	- libdnet 1.11 or higher (bundled with RTPInject)
+	- PyPcap 1.1 or higher (bundled with RTPInject)
+	- dpkt 1.6 or higher (bundled with RTPInject)
+ 
+Additionally, for automatic transcoding support the following packages need to be 
+installed:
+    - Gstreamer 0.10 or higher (usually pre-installed)
+    - Gstreamer-plugins-[base|good|bad] 0.10 or higher ('base' and 'good' usually pre-installed, 	  
+	  'bad' required for GSM encoding support)
+    - PyGstreamer 0.10 or higher (usually pre-installed)
+	
+---
+The following are directions for installing RTPInject:
+
+1) Install the libdnet library shipped with RTPInject. Perform the following commands:
+bash# tar zxvf libdnet-1.11.tar.gz
+bash# cd libdnet-1.11
+bash# ./configure --with-python
+bash# make all
+bash# make install   (*note: this step must be performed as root)
+
+2) Install the pypcap library shipped with RTPInject. Perform the following commands:
+bash# tar zxvf pypcap-1.1.tar.gz
+bash# cd pypcap-1.1
+bash# make all
+bash# make install   (*note: this step must be performed as root)
+
+3) Install the dpkt library shipped with RTPInject. Perform the following commands:
+bash# tar zxvf dpkt-1.6.tar.gz
+bash# cd dpkt-1.6
+bash# make all
+bash# make install   (*note: this step must be performed as root)
+
+4) Launch RTPInject! Perform the following commands:
+bash# python rtpinject.py (*note: this step must be performed as root)
